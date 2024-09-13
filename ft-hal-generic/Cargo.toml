@@ -1,0 +1,9 @@
+[package]
+name = "ft-hal-generic"
+version = "0.1.0"
+edition = "2021"
+
+authors = ["dmholtz"]
+
+
+[dependencies]
