@@ -141,6 +141,7 @@ dependencies = [
  "arduino-hal",
  "drivers",
  "embedded-hal 1.0.0",
+ "ft-hal-generic",
  "nb 1.1.0",
  "panic-halt",
  "proc-macro2",

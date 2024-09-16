@@ -17,6 +17,7 @@ nb = "1.1.0"
 embedded-hal = "1.0.0"
 
 drivers = { path = "../../drivers" }
+ft-hal-generic = { path = "../../ft-hal-generic" }
 
 [dependencies.arduino-hal]
 git = "https://github.com/rahix/avr-hal"
