@@ -57,7 +57,7 @@ dependencies = [
  "cfg-if 0.1.10",
  "embedded-hal 0.2.7",
  "embedded-hal 1.0.0",
- "embedded-hal-bus",
+ "embedded-hal-bus 0.1.0",
  "embedded-storage",
  "nb 1.1.0",
  "paste",
@@ -91,14 +91,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f64009896348fc5af4222e9cf7d7d82a95a256c634ebcf61c53e4ea461422242"
 
 [[package]]
-name = "drivers"
-version = "0.1.0"
-dependencies = [
- "embedded-hal 1.0.0",
- "ft-hal-generic",
-]
-
-[[package]]
 name = "embedded-hal"
 version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -125,6 +117,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "embedded-hal-bus"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0d3980bf28e8577db59fe2bdb3df868a419469d2cecb363644eea2b6f7797669"
+dependencies = [
+ "critical-section",
+ "embedded-hal 1.0.0",
+ "portable-atomic",
+]
+
+[[package]]
 name = "embedded-storage"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -135,12 +138,13 @@ name = "ft-hal-generic"
 version = "0.1.0"
 
 [[package]]
-name = "ft-micro"
+name = "ftduino"
 version = "0.1.0"
 dependencies = [
  "arduino-hal",
- "drivers",
+ "avr-device",
  "embedded-hal 1.0.0",
+ "embedded-hal-bus 0.2.0",
  "ft-hal-generic",
  "nb 1.1.0",
  "panic-halt",
@@ -174,6 +178,12 @@ name = "paste"
 version = "1.0.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
+
+[[package]]
+name = "portable-atomic"
+version = "1.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d30538d42559de6b034bc76fd6dd4c38961b1ee5c6c56e3808c50128fdbc22ce"
 
 [[package]]
 name = "proc-macro2"

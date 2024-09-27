@@ -12,7 +12,6 @@ opt-level = "s"
 
 [workspace]
 members = [
-    "boards/ft-micro",
-    "drivers",
+    "boards/ftduino",
     "ft-hal-generic",
 ]
